@@ -1,0 +1,19 @@
+apiVersion: 1
+
+datasources:
+  - name: k6influxdb
+    type: influxdb
+    access: proxy
+    database: k6
+    url: http://influxdb:8086
+    isDefault: true
+
+  - name: MySQL
+    type: mysql
+    url: host.docker.internal:3306
+    database: bezkoder_db
+    user: root
+    password: 123456
+    access: proxy
+
+
